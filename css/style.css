@@ -1,0 +1,136 @@
+:root {
+    --blue: green;
+    --yellow: rgb(143, 211, 41);
+    --lightyellow: white;
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Menu */
+header{
+    position: flex;
+    color: var(--lightyellow);
+    display: flex;
+    justify-content: space-between;
+    min-height: 2rem;
+    font-size: 1.5rem;
+    background-color: var(--blue);
+}
+.logo{
+    padding: 1rem;
+}
+
+#menu li{   
+    text-align: center;
+    display: inline;
+}
+
+#menu li a{
+    padding: 1rem 0;
+    margin-left: -0.3rem;
+    width: 15rem;
+    color: var(--lightyellow);
+    display: inline-block;
+    transition: 0.75s;
+}
+#menu li a:hover{
+    background-color: var(--yellow);
+    color: black;
+}
+
+/* Conteúdo */
+
+main{
+    display: flex;
+    text-align: center;
+    min-height: 90vh;
+    padding: 1rem 1rem 0rem 0rem;
+    justify-content: center;
+    font-size: 20px;
+}
+.principal{
+    padding: 1rem 1rem;
+    margin: 2rem 1rem;
+
+}
+.img-principal{
+    display: block;
+    margin: 2rem auto;
+    width: 80%;
+}
+
+.principal h1{
+    padding-bottom: 2rem;
+}
+
+.principal p{
+    padding: 3rem 1rem;
+}
+
+.botao-principal{
+    display: flex;
+    justify-content: center;
+    padding: 75px 0;
+}
+
+.botao-principal a{
+    padding: 20px 60px;
+    color: var(--lightyellow);
+    background-color: var(--blue);
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px black;
+    transition: 0.5s;
+}
+.botao-principal a:hover{
+    background-color: var(--yellow);
+    color: var(--blue);
+}
+
+.botao-login{
+    padding: 20px;
+    width: 180px;
+    font-weight: bold;
+    font-size: 12pt;
+    margin: 20px 0 20px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+}
+
+.botao-login:hover{
+    background-color: rgb(143, 211, 41);
+    color: black;
+}
+
+/* Rodapé */
+
+footer{
+    position: flex;
+    text-align: center;
+    bottom: 0;
+}
+
+.rodape{
+    color: var(--lightyellow);
+    background-color: var(--blue);
+    padding: 1rem;
+}
+
+.fa{
+    color: var(--lightyellow);
+    padding: 0.5rem;
+}
+
+.fa:hover{
+    color: var(--yellow);
+}

@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(102, 160, 15);
+}
+.back-login{
+    min-height: 100vh;
+    min-width: 100vw;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tela-login{
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 5px 5px 2px 0px #00000070;
+    padding: 35px;
+    min-height: 600px;
+    width: 400px;
+}
+
+.tela-cadastro{
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 5px 5px 2px 0px #00000070;
+    padding: 35px;
+    min-height: 600px;
+    width: 700px;
+}
+
+.logo{
+    display: flex;
+    height: 220px;
+    margin: 50px auto 30px auto;
+}
+
+.label-float input{
+    width: 100%;
+    padding: 5px 5px;
+    display: inline-block;
+    border: 0;
+    border-bottom: 3px solid;
+    outline: none;
+    transition: all .3s ease-out;
+    min-width: 200px;
+    font-size: 1.2rem;
+}
+
+.label-float label{
+    position: absolute;
+    font-size: 1.2rem;
+    top:  0;
+    left: 0;
+    margin-top: 13px;
+    transition: all .3s ease-out;
+}
+
+.label-float input:focus + label, .label-float input:valid + label{
+    font-size: 13px;
+    margin-top: 0;
+}
+
+.label-float{
+    position: relative;
+    padding-top: 10px;
+    margin: 5% 0 5% 0;
+}
+
+/* Botões */
+.botao-login{
+    padding: 15px;
+    width: 140px;
+    font-weight: bold;
+    font-size: 12pt;
+    margin: 20px 0 20px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+}
+
+.botao-login:hover{
+    background-color: rgb(143, 211, 41);
+    color: white;
+}
+
+.botao-sair{
+    padding: 15px;
+    width: 140px;
+    font-weight: bold;
+    font-size: 12pt;
+    margin: 20px 0 20px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(206, 20, 20);
+    color: white;
+}
+
+.botao-sair:hover{
+    background-color: rgb(212, 115, 120);
+    color: white;
+}
+
+
+.alinha a{
+    padding: 0 1rem;
+}
+
+.contato{
+    text-align: center;
+}
+
+.alinha{
+    display: flex;
+    justify-content: center;
+}
+
+.fa-eye{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    cursor: pointer;
+}
