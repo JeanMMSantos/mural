@@ -45,7 +45,7 @@
                         $id = $cursos['id'];
                         $tipo = $cursos['tipo'];
                         if ($tipo == 2)
-                            echo ($nome . ": " . $link);
+                            echo ($nome . ": " . $link . "<br><br>");
                     } // fecha foreach
                 } // fecha if
                 else {

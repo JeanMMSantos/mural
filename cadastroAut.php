@@ -7,7 +7,7 @@
 
     insereCurso($nome, $curso, $tipo);
 ?>
-    <!-- <meta http-equiv="refresh" content="0; URL='login.php?mensagem=ui'"/> -->
+    <meta http-equiv="refresh" content="0; URL='painel.php?mensagem=ui'"/>
 <?php
     
 
