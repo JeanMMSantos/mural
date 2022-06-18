@@ -18,7 +18,7 @@ function validaUsuario($email, $senha) {
 function inserePessoa($nome, $senha, $email) {
      echo "Aqui insere";
      // Define o comando SQL  (insert)
-     $sql = "INSERT INTO usuario(nome, email, senha) 
+     $sql = "INSERT INTO usuarios(nome, email, senha) 
          VALUES('$nome', '$email', '$senha')";
      $conexao = abreConexao(); // Abre a conexão com o BD
      $conexao->query($sql); // Executa o comando SQL
