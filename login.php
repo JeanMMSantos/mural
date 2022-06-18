@@ -1,5 +1,8 @@
 <?php
-    include_once("conecta.php");
+
+session_start();
+session_destroy();
+    /* include_once("conecta.php");
     
     if (isset($_POST["email"]) || isset($_POST["senha"])) {
 		if(strlen($_POST["email"]) == 0){
@@ -35,19 +38,7 @@
                 echo "Falha ao logar, E-mail ou Senha Incorretos";
             }
         }
-    $nome = $senha = $email = "";
-	} 
-    /* else { // Alteração de registro
-		$idpessoa = $_GET['id']; 
-		include_once("pessoa.php");
-		$pessoa = retornaPessoaPorId($idpessoa);
-		if ($pessoa != null) { // Verifica se retornou um registro
-            $titulo = "Atualização dos dados da pessoa";
-            $nome = $pessoa["nome"];
-            $email = $pessoa["email"];
-            $senha = $pessoa["senha"];
-        }
-    } */
+	} */ 
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -73,21 +64,23 @@
             </div>
             <form action="autentica.php" method="POST">
             <div class="label-float">
-                <input type="email" id="email" placeholder="" required>
+                <input type="email" name="email" id="email" placeholder="" required>
                 <label for="email" id="label-email">E-mail:</label>
             </div>
             
             <div class="label-float">
-                <input type="password" id="senha" placeholder="" required>
+                <input type="password" name="senha" id="senha" placeholder="" required>
                 <label for="senha" id="label-senha">Senha:</label>
                 <i class="fa fa-eye fa-lg" onclick="mostrar()"></i>
             </div>
 
             <div class="alinha">
                 <a><button class="botao-login" type="submit">Entrar</button></a>
-                <a href="index.html"><button class="botao-sair">Voltar</button></a>
             </div>
             </form>
+            <div class="alinha">
+                <a href="index.html"><button class="botao-sair">Voltar</button></a>
+            </div>
             
 
             <p class="contato">Não tem conta? <a href="cadastro.php">Cadastre-se</a></p>            

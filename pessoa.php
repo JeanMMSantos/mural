@@ -2,8 +2,8 @@
 
 include_once("conecta.php"); // Inclui a classe conecta
 
-function validaUsuario($user, $senha) {
-    $sql = "SELECT * FROM usuario WHERE usuario = '".$user."' AND senha = '".$senha."';";
+function validaUsuario($email, $senha) {
+    $sql = "SELECT * FROM usuarios WHERE email = '".$email."' AND senha = '".$senha."';";
     $conexao = abreConexao(); // Abre a conexão com o BD
     $resultado = $conexao->query($sql);
     $conexao->close(); // Fecha a conexão com o BD
@@ -15,7 +15,7 @@ function validaUsuario($user, $senha) {
     } 
 }
 
-function inserePessoa($nome, $telefone, $email) {
+function inserePessoa($nome, $senha, $email) {
      echo "Aqui insere";
      // Define o comando SQL  (insert)
      $sql = "INSERT INTO usuario(nome, email, senha) 
