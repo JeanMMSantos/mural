@@ -13,4 +13,18 @@ function insereCurso($nome, $curso, $tipo) {
      $conexao->close(); 	// Fecha a conexão com o BD
  }
 
+ function retornaCurso() {
+	$sql = "SELECT * FROM cursos ORDER BY nome";
+	$conexao = abreConexao(); # Abre a conexão com o BD
+	$resultado = $conexao->query($sql);
+	$conexao->close(); // Fecha a conexão com o BD
+	if (mysqli_num_rows($resultado) > 0) {
+		 while ($row = mysqli_fetch_array($resultado)) {
+			  $curso[] = $row;
+		 }
+		 return $curso;
+	} else {
+		 return null;
+	} }
+
 ?>

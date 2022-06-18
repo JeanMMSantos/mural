@@ -7,7 +7,7 @@
     <title>Mural</title>
 
     <!-- JavaScript -->
-    <script src="js/index.js"></script>
+    <script src="code.js"></script>
 
     <!-- Link to CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -32,11 +32,27 @@
     </header>
     <main>
         <div class="principal">
-            <h1>MURAL IFSULDEMINAS</h1>
+            <h1>OUTROS CURSOS</h1>
             <p class="paragrafo-principal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aliquid esse id alias eos rerum, modi libero cum quibusdam quae corporis dignissimos dolorum qui accusamus dolores laudantium quam, quos voluptate.</P>
-            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, adipisci. Nemo, animi aut! Eos facere dignissimos neque quam cumque ducimus, necessitatibus cupiditate vitae, tenetur quidem cum nisi. Quis, reprehenderit sequi!</P>
-            <a href="login.php"><div class="botao-principal"><button class="botao-login">Inserir Curso</button></div></a>
+
+            <div>
+                <?php include_once("curso.php");
+                $vetcursos = retornaCurso();
+                if ($vetcursos != null) {
+                    foreach ($vetcursos as $cursos) {
+                        $nome = $cursos['nome'];
+                        $link = $cursos['curso'];
+                        $id = $cursos['id'];
+                        $tipo = $cursos['tipo'];
+                        if ($tipo == 4)
+                            echo ($nome . ": " . $link);
+                    } // fecha foreach
+                } // fecha if
+                else {
+                    echo ("Nenhum registro encontrado!");
+                }
+                ?>
+            </div>
         </div>
         
     </main>
@@ -47,7 +63,7 @@
             <a href="https://www.instagram.com/accounts/login/?next=/ifsuldeminascampuspassos/"><i class="fa fa-instagram" style="font-size:24px"></i></a>
             <a href="https://pt-br.facebook.com/campuspassos/"><i class="fa fa-facebook" style="font-size:24px"></i></a>
             <a href="mailto:administrador@xilique.com"><i class="fa fa-envelope" style="font-size:24px"></i></a>
-            <p>Jean Santos, Bruno Pimenta ©2022</p>
+            <p>Jean Santos ©2022</p>
         </div>        
     </footer>
 </body>
