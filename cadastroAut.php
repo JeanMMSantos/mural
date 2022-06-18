@@ -1,14 +1,13 @@
 <?php
-    include_once("pessoa.php");
+    include_once("curso.php");
         
-    $email = $_POST["email"];
     $nome = $_POST["nome"];
-    $senha = $_POST["senha"];
-    $confemail = $_POST["confsenha"];
+    $curso = $_POST["curso"];
+    $tipo = $_POST["tipo"];
 
-    inserePessoa($nome, $senha, $email);
+    insereCurso($nome, $curso, $tipo);
 ?>
-    <meta http-equiv="refresh" content="0; URL='login.php?mensagem=ui'"/>
+    <!-- <meta http-equiv="refresh" content="0; URL='login.php?mensagem=ui'"/> -->
 <?php
     
 
