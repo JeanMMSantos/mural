@@ -1,16 +1,18 @@
 <?php
-    session_start();   
     include_once("pessoa.php");
-
-    $nome = $_POST["nome"];
+        
     $email = $_POST["email"];
+    $nome = $_POST["nome"];
     $senha = $_POST["senha"];
-    $confSenha = $_POST["confsenha"];
+    $confemail = $_POST["confsenha"];
 
-    $logins = inserePessoa($nome, $senha, $email);
+    inserePessoa($nome, $senha, $email);
+?>
+    <meta http-equiv="refresh" content="0; URL='login.php?mensagem=ui'"/>
+<?php
     
 
-    if($logins == null){ 
+    /* if($logins == null){ 
         $_SESSION['login'] = false; ?>
     
         <meta http-equiv="refresh" content="0; URL='cadastro.php?mensagem=ui'"/>
@@ -20,6 +22,6 @@
     ?>
         <meta http-equiv="refresh" content="0; URL='login.php'"/>
     <?php    }
-    exit(1);  
+    exit(1);   */
 
 ?>
